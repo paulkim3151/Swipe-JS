@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="swipe.css">
+	<title>Swipe 벽돌깨기 ver 1.0</title>
+</head>
+
+<body>
+	<div id="game-title">Swipe 벽돌깨기 <small>ver 1.0</small></div>
+	<div class="score-container">
+		<div class="score">Score: 0</div>
+	</div>
+	<div class="container">
+		<div class="leaderboard" id="lb-global">
+			<div class="lb_item title center">🏆✨명예의 전당✨🏆</div>
+			<div class="lb_content">
+				<div class="lb_item">
+					<div class="rank">🥇</div>
+					<div class="name"></div>
+					<div class="score"></div>
+				</div>
+				<div class="lb_item">
+					<div class="rank">🥈</div>
+					<div class="name"></div>
+					<div class="score"></div>
+				</div>
+				<div class="lb_item">
+					<div class="rank">🥉</div>
+					<div class="name"></div>
+					<div class="score"></div>
+				</div>
+				<div class="lb_item">
+					<div class="num">4</div>
+					<div class="name"></div>
+					<div class="score"></div>
+				</div>
+				<div class="lb_item">
+					<div class="num">5</div>
+					<div class="name"></div>
+					<div class="score"></div>
+				</div>
+			</div>
+		</div>
+		<div class="game-container">
+			<hr class="guideline hidden">
+			<div class="ball guide hidden"></div>
+			<hr class="death-barrier">
+			<div class="hidden" id="gameover-overlay">
+				<div class="gameover-title">Game Over!</div>
+				<div class="gameover-score">Score: <span id="score"></span>
+				</div>
+				<form class="scoreForm" id="scoreForm">
+					<input type="text" id="name" required maxlength=12 placeholder="등록할 닉네임을 입력하세요!"></input>
+					<button type="submit" form="scoreForm">등록</button>
+				</form>
+				<div class="gameover-text">F5키로 다시 시작</div>
+			</div>
+		</div>
+		<div class="leaderboard" id="lb-month">
+			<div class="lb_item title">이달의 최고기록<small>(매달 초기화)</small></div>
+			<div class="lb_content">
+				<div class="lb_item no-data hidden">
+					기록이 없습니다.
+				</div>
+			</div>
+		</div>
+	</div>
+	<center id="gameover-text"></center>
+	<script src="swipe.js" type="text/javascript"></script>
+</body>
+
+</html>
